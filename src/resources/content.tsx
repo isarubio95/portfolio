@@ -1,21 +1,21 @@
-import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
+import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/types";
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
   firstName: "Selene",
   lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  name: "Isaías Rubio",
+  role: "Programador Web Full Stack",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "isarubio95@gmail.com",
+  location: "Europe/Madrid", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["Español", "Inglés"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: <>My weekly newsletter about creativity and engineering</>,
+  title: <>Suscríbete a mi {person.firstName} Newsletter</>,
+  description: <>Mi newsletter semanal sobre programación y tecnología.</>,
 };
 
 const social: Social = [
@@ -25,25 +25,25 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/isarubio95",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/isa%C3%ADas-rubio-hern%C3%A1ndez-539085139/",
     essential: true,
   },
   {
     name: "Instagram",
     icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
+    link: "https://www.instagram.com/isarubio95/",
     essential: false,
   },
   {
     name: "Threads",
     icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.threads.com/@isarubio95",
     essential: true,
   },
   {
@@ -83,7 +83,7 @@ const home: Home = {
 
 const about: About = {
   path: "/about",
-  label: "About",
+  label: "Sobre mí",
   title: `About – ${person.name}`,
   description: `Meet ${person.name}, ${person.role} from ${person.location}`,
   tableOfContent: {
@@ -99,32 +99,26 @@ const about: About = {
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Introducción",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Soy Isaías Rubio, desarrollador web nacido en Logroño con una fuerte pasión por transformar problemas complejos en soluciones técnicas 
+        sencillas y eficientes. Mi trabajo se centra en el desarrollo de aplicaciones robustas, experiencias interactivas y la integración fluida entre la 
+        lógica de programación y la experiencia de usuario.
       </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experiencia Laboral",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "PANOimagen",
+        timeframe: "2025 - Present",
+        role: "Programador Web & Data Engineer",
         achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
+          "Reconstruí un sistema de bigdata utilizando tecnologías modernas como Spark o Dagster, mejorando la eficiencia del procesamiento de datos en un 30%.",
+          "Impulsé la implementación de herramientas de inteligencia artificial en los procesos de desarrollo, logrando una reducción del 50% en los tiempos de iteración.",
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -136,46 +130,34 @@ const about: About = {
           },
         ],
       },
-      {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
-      },
     ],
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Estudios",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Centro Integral de Formación a Distancia de La Rioja",
+        description: <>Grado Superior en Desarrollo de Aplicaciones Web</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Univerdad de La Rioja",
+        description: <>Microcredencial Data Science con Python</>,
+      },
+      {
+        name: "Univerdad de Cambridge",
+        description: <>B2 First</>,
       },
     ],
   },
   technical: {
     display: true, // set to false to hide this section
-    title: "Technical skills",
+    title: "Habilidades Técnicas",
     skills: [
       {
         title: "Figma",
         description: (
-          <>Able to prototype in Figma with Once UI with unnatural speed.</>
+          <>Dominio avanzado para la extracción de recursos y traslación fiel de sistemas de diseño a componentes de software.</>
         ),
         tags: [
           {
@@ -202,7 +184,8 @@ const about: About = {
       {
         title: "Next.js",
         description: (
-          <>Building next gen apps with Next.js + Once UI + Supabase.</>
+          <>Desarrollo de aplicaciones web de alto rendimiento mediante Server-Side Rendering (SSR) y 
+            Static Site Generation (SSG) para optimizar la carga y el SEO.</>
         ),
         tags: [
           {
@@ -235,7 +218,7 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Escribiendo sobre desarrollo web...",
   description: `Read what ${person.name} has been up to recently`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
@@ -243,16 +226,16 @@ const blog: Blog = {
 
 const work: Work = {
   path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
+  label: "Proyectos",
+  title: `Proyectos – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
 
 const gallery: Gallery = {
-  path: "/gallery",
-  label: "Gallery",
+  path: "/galeria",
+  label: "Galería",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
   // Images by https://lorant.one
