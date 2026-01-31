@@ -2,11 +2,11 @@ import type { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } fro
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Isaías",
+  lastName: "Rubio",
   name: "Isaías Rubio",
   role: "Programador Web Full Stack",
-  avatar: "/images/avatar.jpg",
+  avatar: "/images/avatar.webp",
   email: "isarubio95@gmail.com",
   location: "Europe/Madrid", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["Español", "Inglés"], // optional: Leave the array empty if you don't want to display languages
@@ -60,9 +60,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Transformando ideas en aplicaciones robustas</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -76,7 +76,7 @@ const home: Home = {
   },
   subline: (
     <>
-    I'm Selene, a design engineer at <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+    Me llamo Isaías Rubio, soy un programador web apasionado por la arquitectura limpia y la eficiencia. Actualmente desarrollo soluciones <br /> digitales en <Text as="span" size="xl" weight="strong">PANOimagen</Text>, y dedico mi tiempo personal a dar vida a proyectos propios.
 </>
   ),
 };
@@ -95,7 +95,7 @@ const about: About = {
   },
   calendar: {
     display: true,
-    link: "https://cal.com",
+    link: "https://cal.com/isaias-rubio-duupcu/15min?user=isaias-rubio-duupcu&overlayCalendar=true",
   },
   intro: {
     display: true,
@@ -123,7 +123,7 @@ const about: About = {
         images: [
           // optional: leave the array empty if you don't want to display images
           {
-            src: "/images/projects/project-01/cover-01.jpg",
+            src: "/images/projects/project-01/cover-01.png",
             alt: "Once UI Project",
             width: 16,
             height: 9,
@@ -168,13 +168,13 @@ const about: About = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-02.jpg",
+            src: "/images/projects/project-01/cover-02.png",
             alt: "Project image",
             width: 16,
             height: 9,
           },
           {
-            src: "/images/projects/project-01/cover-03.jpg",
+            src: "/images/projects/project-01/cover-03.png",
             alt: "Project image",
             width: 16,
             height: 9,
@@ -204,7 +204,7 @@ const about: About = {
         // optional: leave the array empty if you don't want to display images
         images: [
           {
-            src: "/images/projects/project-01/cover-04.jpg",
+            src: "/images/projects/project-01/cover-04.png",
             alt: "Project image",
             width: 16,
             height: 9,
