@@ -117,7 +117,7 @@ const about: About = {
         timeframe: "2025 - Present",
         role: "Programador Web & Data Engineer",
         achievements: [
-          "Reconstruí un sistema de bigdata utilizando tecnologías modernas como Spark o Dagster, mejorando la eficiencia del procesamiento de datos en un 30%.",
+          "Construí datalake para el tratamiento de big data utilizando tecnologías modernas como Spark o Dagster, mejorando la eficiencia del procesamiento y análisis de datos en un 30%.",
           "Impulsé la implementación de herramientas de inteligencia artificial en los procesos de desarrollo, logrando una reducción del 50% en los tiempos de iteración.",
         ],
         images: [
@@ -211,6 +211,38 @@ const about: About = {
           },
         ],
       },
+      {
+        title: "Django & Python Backend",
+        description: (
+          <>
+            Desarrollo de backends robustos y APIs escalables con <strong>Django Rest Framework</strong>, 
+            enfocado en la eficiencia del ORM y la seguridad de los datos.
+          </>
+        ),
+        tags: [
+          {
+            name: "Python",
+            icon: "python",
+          },
+          {
+            name: "Django",
+            icon: "django",
+          },
+          {
+            name: "PostgreSQL",
+            icon: "postgresql",
+          },
+        ],
+        // Mantenemos las imágenes que tenías o puedes añadir una específica de arquitectura
+        images: [
+          {
+            src: "/images/projects/project-01/cover-04.png",
+            alt: "Estructura de proyecto Django",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
     ],
   },
 };
@@ -225,7 +257,7 @@ const blog: Blog = {
 };
 
 const work: Work = {
-  path: "/work",
+  path: "/proyectos",
   label: "Proyectos",
   title: `Proyectos – ${person.name}`,
   description: `Design and dev projects by ${person.name}`,

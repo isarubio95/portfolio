@@ -27,6 +27,10 @@ import {
   SiNextdotjs,
   SiFigma,
   SiSupabase,
+  SiPython,
+  SiDjango,
+  SiPostgresql,
+  SiDocker,
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
@@ -64,6 +68,10 @@ export const iconLibrary: Record<string, IconType> = {
   reddit: FaReddit,
   telegram: FaTelegram,
   instagram: FaInstagram,
+  python: SiPython,
+  django: SiDjango,
+  postgresql: SiPostgresql,
+  docker: SiDocker,
 };
 
 export type IconLibrary = typeof iconLibrary;
