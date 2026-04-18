@@ -5,6 +5,7 @@ import {
   Heading,
   Icon,
   IconButton,
+  Line,
   Media,
   Tag,
   Text,
@@ -197,17 +198,18 @@ export default function About() {
           </Column>
 
           {about.intro.display && (
-            <Column textVariant="body-default-l" fillWidth gap="m" marginBottom="xl">
+            <Column textVariant="body-default-l" fillWidth gap="m">
               {about.intro.description}
             </Column>
           )}
 
           {about.work.display && (
             <>
+              <Line background="neutral-alpha-weak" marginY="l" />
               <Heading as="h2" id={about.work.title} variant="display-strong-s" marginBottom="m">
                 {about.work.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
+              <Column fillWidth gap="l">
                 {about.work.experiences.map((experience, index) => (
                   <Column key={`${experience.company}-${experience.role}-${index}`} fillWidth>
                     <Row fillWidth horizontal="between" vertical="end" marginBottom="4">
@@ -263,17 +265,18 @@ export default function About() {
 
           {about.studies.display && (
             <>
+              <Line background="neutral-alpha-weak" marginY="l" />
               <Heading as="h2" id={about.studies.title} variant="display-strong-s" marginBottom="m">
                 {about.studies.title}
               </Heading>
-              <Column fillWidth gap="l" marginBottom="40">
+              <Column fillWidth gap="l">
                 {about.studies.institutions.map((institution, index) => (
                   <Column key={`${institution.name}-${index}`} fillWidth gap="4">
                     <Text id={institution.name} variant="heading-strong-l">
-                      {institution.name}
+                      {institution.description}
                     </Text>
                     <Text variant="heading-default-xs" onBackground="neutral-weak">
-                      {institution.description}
+                      {institution.name}
                     </Text>
                   </Column>
                 ))}
@@ -283,11 +286,12 @@ export default function About() {
 
           {about.technical.display && (
             <>
+              <Line background="neutral-alpha-weak" marginY="l" />
               <Heading
                 as="h2"
                 id={about.technical.title}
                 variant="display-strong-s"
-                marginBottom="40"
+                marginBottom="m"
               >
                 {about.technical.title}
               </Heading>
@@ -312,21 +316,32 @@ export default function About() {
                     {skill.images && skill.images.length > 0 && (
                       <Row fillWidth paddingTop="m" gap="12" wrap>
                         {skill.images.map((image, index) => (
-                          <Row
-                            key={index}
-                            border="neutral-medium"
-                            radius="m"
-                            minWidth={image.width}
-                            height={image.height}
-                          >
-                            <Media
-                              enlarge
-                              radius="m"
-                              sizes={image.width.toString()}
-                              alt={image.alt}
-                              src={image.src}
-                            />
-                          </Row>
+                          <React.Fragment key={index}>
+                            <Row
+                              className={image.srcDark ? styles.lightOnly : undefined}
+                              minWidth={image.width}
+                              height={image.height}
+                            >
+                              <Media
+                                sizes={image.width.toString()}
+                                alt={image.alt}
+                                src={image.src}
+                              />
+                            </Row>
+                            {image.srcDark && (
+                              <Row
+                                className={styles.darkOnly}
+                                minWidth={image.width}
+                                height={image.height}
+                              >
+                                <Media
+                                  sizes={image.width.toString()}
+                                  alt={image.alt}
+                                  src={image.srcDark}
+                                />
+                              </Row>
+                            )}
+                          </React.Fragment>
                         ))}
                       </Row>
                     )}

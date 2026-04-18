@@ -8,6 +8,24 @@
     }
 }
 
+.lightOnly {
+    display: flex;
+}
+
+.darkOnly {
+    display: none;
+}
+
+:global([data-theme="dark"]) {
+    .lightOnly {
+        display: none;
+    }
+
+    .darkOnly {
+        display: flex;
+    }
+}
+
 @media (max-width: breakpoints.$s) {
     .textAlign {
         text-align: center;

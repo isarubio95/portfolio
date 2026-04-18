@@ -24,6 +24,9 @@ import {
 
 import {
   SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiTailwindcss,
   SiNextdotjs,
   SiFigma,
   SiSupabase,
@@ -31,6 +34,7 @@ import {
   SiDjango,
   SiPostgresql,
   SiDocker,
+  SiRedis,
 } from "react-icons/si";
 
 import { FaDiscord, FaGithub, FaLinkedin, FaX, FaThreads, FaInstagram, FaXTwitter, FaFacebook, FaPinterest, FaWhatsapp, FaReddit, FaTelegram, } from "react-icons/fa6";
@@ -59,6 +63,9 @@ export const iconLibrary: Record<string, IconType> = {
   document: HiOutlineDocument,
   rocket: HiOutlineRocketLaunch,
   javascript: SiJavascript,
+  typescript: SiTypescript,
+  react: SiReact,
+  tailwindcss: SiTailwindcss,
   nextjs: SiNextdotjs,
   supabase: SiSupabase,
   figma: SiFigma,
@@ -72,6 +79,7 @@ export const iconLibrary: Record<string, IconType> = {
   django: SiDjango,
   postgresql: SiPostgresql,
   docker: SiDocker,
+  redis: SiRedis,
 };
 
 export type IconLibrary = typeof iconLibrary;

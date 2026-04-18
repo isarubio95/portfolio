@@ -14,8 +14,8 @@ const person: Person = {
 
 const newsletter: Newsletter = {
   display: true,
-  title: <>Suscríbete a mi {person.firstName} Newsletter</>,
-  description: <>Mi newsletter semanal sobre programación y tecnología.</>,
+  title: <>Suscríbete a la newsletter de {person.firstName}</>,
+  description: <>Cada semana, una dosis de programación, ideas y tecnología directamente en tu bandeja de entrada.</>,
 };
 
 const social: Social = [
@@ -57,10 +57,10 @@ const social: Social = [
 const home: Home = {
   path: "/",
   image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Transformando ideas en aplicaciones robustas</>,
+  label: "Inicio",
+  title: `Portfolio de ${person.name}`,
+  description: `Portfolio de ${person.name}, ${person.role}. Diseño y desarrollo de aplicaciones web modernas, rápidas y pensadas para las personas.`,
+  headline: <>Convierto ideas en productos digitales que funcionan</>,
   featured: {
     display: false,
     title: (
@@ -76,16 +76,16 @@ const home: Home = {
   },
   subline: (
     <>
-    Me llamo Isaías Rubio, soy un programador web apasionado por la arquitectura limpia y la eficiencia. Actualmente desarrollo soluciones <br /> digitales en <Text as="span" size="xl" weight="strong">PANOimagen</Text>, y dedico mi tiempo personal a dar vida a proyectos propios.
-</>
+      Soy Isaías Rubio, desarrollador web enamorado del código limpio y las soluciones que se sienten <br /> fluidas. Ahora mismo construyo producto en <Text as="span" size="xl" weight="strong">PANOimagen</Text>, y en mis ratos libres doy forma a mis propias ideas.
+    </>
   ),
 };
 
 const about: About = {
   path: "/about",
   label: "Sobre mí",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  title: `Sobre mí – ${person.name}`,
+  description: `Conoce a ${person.name}, ${person.role}. Mi recorrido, experiencia y la manera en la que entiendo el desarrollo web.`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -102,9 +102,9 @@ const about: About = {
     title: "Introducción",
     description: (
       <>
-        Soy Isaías Rubio, desarrollador web nacido en Logroño con una fuerte pasión por transformar problemas complejos en soluciones técnicas 
-        sencillas y eficientes. Mi trabajo se centra en el desarrollo de aplicaciones robustas, experiencias interactivas y la integración fluida entre la 
-        lógica de programación y la experiencia de usuario.
+        Soy Isaías Rubio, un desarrollador web de Logroño con una obsesión: transformar problemas enredados en soluciones limpias y fáciles de mantener. 
+        Me muevo entre la lógica del código y el detalle de la interfaz, buscando siempre que mis aplicaciones no solo funcionen perfectamente, sino 
+        que se sientan naturales al usarlas.
       </>
     ),
   },
@@ -114,11 +114,11 @@ const about: About = {
     experiences: [
       {
         company: "PANOimagen",
-        timeframe: "2025 - Present",
+        timeframe: "2025 - Actualidad",
         role: "Programador Web & Data Engineer",
         achievements: [
-          "Construí datalake para el tratamiento de big data utilizando tecnologías modernas como Spark o Dagster, mejorando la eficiencia del procesamiento y análisis de datos en un 30%.",
-          "Impulsé la implementación de herramientas de inteligencia artificial en los procesos de desarrollo, logrando una reducción del 50% en los tiempos de iteración.",
+          "Diseñé y construí un data lake para el tratamiento de grandes volúmenes de datos con tecnologías como Spark y Dagster, mejorando la eficiencia del procesamiento y análisis en un 30%.",
+          "Introduje herramientas de inteligencia artificial en el flujo de desarrollo del equipo, reduciendo a la mitad los tiempos de iteración y acelerando la entrega de nuevas funcionalidades.",
         ],
         images: [
           // optional: leave the array empty if you don't want to display images
@@ -141,12 +141,12 @@ const about: About = {
         description: <>Grado Superior en Desarrollo de Aplicaciones Web</>,
       },
       {
-        name: "Univerdad de La Rioja",
-        description: <>Microcredencial Data Science con Python</>,
+        name: "Universidad de La Rioja",
+        description: <>Microcredencial en Data Science con Python</>,
       },
       {
-        name: "Univerdad de Cambridge",
-        description: <>B2 First</>,
+        name: "Universidad de Cambridge",
+        description: <>Certificación B2 First en inglés</>,
       },
     ],
   },
@@ -157,57 +157,34 @@ const about: About = {
       {
         title: "Figma",
         description: (
-          <>Dominio avanzado para la extracción de recursos y traslación fiel de sistemas de diseño a componentes de software.</>
+          <>Traduzco diseños a código con fidelidad milimétrica, extrayendo recursos y convirtiendo sistemas de diseño en componentes reutilizables y consistentes.</>
         ),
-        tags: [
-          {
-            name: "Figma",
-            icon: "figma",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
+        tags: [],
         images: [
           {
-            src: "/images/projects/project-01/cover-02.png",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.png",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/images/logos/figma.png",
+            alt: "Logo de Figma",
+            width: 6,
+            height: 6,
           },
         ],
       },
       {
         title: "Next.js",
         description: (
-          <>Desarrollo de aplicaciones web de alto rendimiento mediante Server-Side Rendering (SSR) y 
-            Static Site Generation (SSG) para optimizar la carga y el SEO.</>
+          <>
+            Construyo aplicaciones web rápidas y escalables aprovechando <strong>SSR</strong> y <strong>SSG</strong> para conseguir cargas instantáneas,
+            una gran experiencia de usuario y un SEO impecable desde el primer despliegue.
+          </>
         ),
-        tags: [
-          {
-            name: "JavaScript",
-            icon: "javascript",
-          },
-          {
-            name: "Next.js",
-            icon: "nextjs",
-          },
-          {
-            name: "Supabase",
-            icon: "supabase",
-          },
-        ],
-        // optional: leave the array empty if you don't want to display images
+        tags: [],
         images: [
           {
-            src: "/images/projects/project-01/cover-04.png",
-            alt: "Project image",
-            width: 16,
-            height: 9,
+            src: "/images/logos/nextjs-black.png",
+            srcDark: "/images/logos/nextjs-white.png",
+            alt: "Logo de Next.js",
+            width: 6,
+            height: 6,
           },
         ],
       },
@@ -215,31 +192,17 @@ const about: About = {
         title: "Django & Python Backend",
         description: (
           <>
-            Desarrollo de backends robustos y APIs escalables con <strong>Django Rest Framework</strong>, 
-            enfocado en la eficiencia del ORM y la seguridad de los datos.
+            Desarrollo backends sólidos y APIs escalables con <strong>Django Rest Framework</strong>, cuidando cada consulta al ORM
+            y blindando la seguridad de los datos sin renunciar al rendimiento.
           </>
         ),
-        tags: [
-          {
-            name: "Python",
-            icon: "python",
-          },
-          {
-            name: "Django",
-            icon: "django",
-          },
-          {
-            name: "PostgreSQL",
-            icon: "postgresql",
-          },
-        ],
-        // Mantenemos las imágenes que tenías o puedes añadir una específica de arquitectura
+        tags: [],
         images: [
           {
-            src: "/images/projects/project-01/cover-04.png",
-            alt: "Estructura de proyecto Django",
-            width: 16,
-            height: 9,
+            src: "/images/logos/django2.png",
+            alt: "Logo de Django",
+            width: 6,
+            height: 6,
           },
         ],
       },
@@ -250,8 +213,8 @@ const about: About = {
 const blog: Blog = {
   path: "/blog",
   label: "Blog",
-  title: "Escribiendo sobre desarrollo web...",
-  description: `Read what ${person.name} has been up to recently`,
+  title: "Notas y reflexiones sobre desarrollo web",
+  description: `Lo último que está explorando, aprendiendo y construyendo ${person.name}.`,
   // Create new blog posts by adding a new .mdx file to app/blog/posts
   // All posts will be listed on the /blog route
 };
@@ -260,7 +223,7 @@ const work: Work = {
   path: "/proyectos",
   label: "Proyectos",
   title: `Proyectos – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
+  description: `Una selección de los proyectos de diseño y desarrollo en los que ${person.name} ha dejado huella.`,
   // Create new project pages by adding a new .mdx file to app/blog/posts
   // All projects will be listed on the /home and /work routes
 };
@@ -268,8 +231,8 @@ const work: Work = {
 const gallery: Gallery = {
   path: "/galeria",
   label: "Galería",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
+  title: `Galería fotográfica – ${person.name}`,
+  description: `Una colección visual de momentos capturados por ${person.name}.`,
   // Images by https://lorant.one
   // These are placeholder images, replace with your own
   images: [

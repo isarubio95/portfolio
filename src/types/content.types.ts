@@ -198,8 +198,10 @@ export interface About extends BasePageConfig {
       }>;
       /** Images related to the skill */
       images?: Array<{
-        /** Image source path */
+        /** Image source path (used in light mode, or both if srcDark is not provided) */
         src: string;
+        /** Optional alternate image source for dark mode */
+        srcDark?: string;
         /** Image alt text */
         alt: string;
         /** Image width ratio */
